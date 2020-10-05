@@ -96,7 +96,7 @@ async function loadImageFilePromise(imageUrl) {
 	let buffer;
 	try {
 		buffer = await requestPromiseNative.get({
-			url: imageUrl,
+			url: encodeURI(imageUrl),
 			encoding: null // preserves binary encoding
 		});
 	} catch (ex) {
